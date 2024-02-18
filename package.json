@@ -1,7 +1,7 @@
 {
-	"name": "bedrock-typescript-starter",
+	"name": "mow-my-lawn",
 	"version": "1.0.0",
-	"description": "A template to get started with Bedrock Add-on Development in TypeScript.",
+	"description": "Mow my lawn game",
 	"main": "src/main.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
 		"type": "git",
 		"url": "git+https://github.com/imlighty/bedrock-typescript-starter.git"
 	},
-	"author": "ImLighty",
+	"author": "XLFrie",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/imlighty/bedrock-typescript-starter/issues"

@@ -1,9 +1,9 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Bedrock TypeScript Starter BP",
-		"description": "A template to get started with Bedrock Add-on Development in TypeScript.",
-		"uuid": "18f93d7f-ac98-45d1-8141-dd24b1551fdb",
+		"name": "Mow My Lawn BP",
+		"description": "Mow my lawn game BP.",
+		"uuid": "37bd9b6d-e658-4a93-aac2-9ab10c436c99",
 		"version": [1, 0, 0],
 		"min_engine_version": [1, 20, 60]
 	},
@@ -19,12 +19,12 @@
 	],
 	"dependencies": [
 		{
-			"uuid": "d7a5044d-936d-4bef-9e28-b7e12325d287",
+			"uuid": "ace95849-3c6a-4e28-9922-595deb2f1657",
 			"version": [1, 0, 0]
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.8.0-beta"
+			"version": "1.9.0-beta"
 		},
 		{
 			"module_name": "@minecraft/server-ui",
@@ -32,7 +32,7 @@
 		}
 	],
 	"metadata": {
-		"authors": ["ImLighty"],
-		"url": "https://github.com/imlighty/bedrock-typescript-starter.git"
+		"authors": ["XLFrie"],
+		"url": "https://github.com/marvthedonut/mow-my-lawn.git"
 	}
 }
