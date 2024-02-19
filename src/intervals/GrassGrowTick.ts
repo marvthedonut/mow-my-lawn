@@ -6,7 +6,7 @@ export default class GrassGrowTick implements Interval {
 	public name: string = "grass_grow_tick";
 	public delay: number = 1;
 
-	private cuboid = BoundingBoxUtils.createValid({ x: 64, y: -60, z: -14 }, { x: 56, y: -58, z: -2 });
+	public cuboid = BoundingBoxUtils.createValid({ x: 64, y: -60, z: -14 }, { x: 56, y: -58, z: -2 });
 
 	public execute = async () => {
 		let x = this.cuboid.max.x - this.cuboid.min.x;
