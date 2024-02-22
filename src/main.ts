@@ -12,7 +12,7 @@ server.world.afterEvents.worldInitialize.subscribe(() => {
 
 const grassGrowTick = new GrassGrowTick();
 
-SystemIntervalManager.registerIntervals([grassGrowTick]);
+SystemIntervalManager.registerIntervals([grassGrowTick, new HungerDisable()]);
 EventManager.registerEvents([new BlockBreakRestriction(), new BlockPlaceRestriction()]);
 
 export { grassGrowTick };
