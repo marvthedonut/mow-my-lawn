@@ -5,7 +5,7 @@
 		"description": "Mow my lawn game RP.",
 		"uuid": "ace95849-3c6a-4e28-9922-595deb2f1657",
 		"version": [1, 0, 0],
-		"min_engine_version": [1, 20, 50]
+		"min_engine_version": [1, 21, 21]
 	},
 	"modules": [
 		{
