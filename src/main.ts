@@ -3,6 +3,7 @@ import EventManager from "managers/EventManager";
 import SystemIntervalManager from "managers/SystemIntervalManager";
 import ChatHelper from "utils/ChatHelper";
 import Matrix from "utils/Matrix";
+import { Vector } from "wrappers/Vector";
 import BlockBreakRestriction from "./events/BlockBreakRestriction";
 import BlockPlaceRestriction from "./events/BlockPlaceRestriction";
 import GrassGrowTick from "./intervals/GrassGrowTick";
@@ -18,8 +19,8 @@ SystemIntervalManager.registerIntervals([grassGrowTick, new HungerDisable()]);
 EventManager.registerEvents([new BlockBreakRestriction(), new BlockPlaceRestriction()]);
 
 server.system.runInterval(() => {
-	let vec = { x: 0.5, y: 0, z: 0 };
-	let origin = { x: 65.5, y: -59.0, z: -11.5 };
+	let vec = new Vector(0.5, 0, 0);
+	let origin = new Vector(65.5, -59.0, -11.5);
 
 	const colors: server.RGB[] = [
 		{ red: 68 / 255, green: 1, blue: 68 / 255 },
@@ -33,9 +34,7 @@ server.system.runInterval(() => {
 	for (let i = 0; i < 10; i++) {
 		molang.setColorRGB("variable.color", colors[Math.round(Math.random() * (colors.length - 1))]);
 
-		server.world
-			.getDimension("overworld")
-			.spawnParticle("minecraft:mobspell_ambient", server.Vector.add(origin, mat.transformVector(vec)), molang);
+		server.world.getDimension("overworld").spawnParticle("minecraft:mobspell_ambient", origin.add(mat.transformVector(vec)), molang);
 	}
 }, 3);
 

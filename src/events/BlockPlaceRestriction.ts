@@ -1,6 +1,7 @@
 import { GameMode, PlayerPlaceBlockBeforeEvent, world } from "@minecraft/server";
 import Event from "types/Event";
 import Misc from "utils/Misc";
+import { Vector } from "wrappers/Vector";
 import { grassGrowTick } from "../main";
 
 export default class BlockPlaceRestriction implements Event {
@@ -11,7 +12,7 @@ export default class BlockPlaceRestriction implements Event {
 		// Jayly method ???
 		if (
 			Object.values(GameMode).find((g) => [...world.getPlayers({ name: player.name, gameMode: g })].length) != GameMode.creative &&
-			!Misc.isInside(grassGrowTick.cuboid, event.block.location)
+			!Misc.isInside(grassGrowTick.cuboid, new Vector(event.block.location))
 		)
 			event.cancel = true;
 
